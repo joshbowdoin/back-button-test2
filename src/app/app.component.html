@@ -1,3 +1,21 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <div style="position: relative; height: 100%;">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
+  <ion-tab-bar slot="bottom" style="margin-top: auto;" [selectedTab]="tabsService.selectedTab$ | async" *ngIf="tabsService.tabsShowing$ | async">
+    <ion-tab-button tab="tab1" (click)="tabsService.changeTab('tab1')">
+      <ion-icon name="triangle"></ion-icon>
+      <ion-label>Tab 1</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" (click)="tabsService.changeTab('tab2')">
+      <ion-icon name="ellipse"></ion-icon>
+      <ion-label>Tab 2</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" (click)="tabsService.changeTab('tab3')">
+      <ion-icon name="square"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
 </ion-app>

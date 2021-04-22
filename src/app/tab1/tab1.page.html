@@ -12,6 +12,22 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <p>
+    My Test Links...
+  </p>
+  <p>
+    <a (click)="tabsService.showTabs()">Show Tabs</a>
+    <br />
+    <a (click)="tabsService.hideTabs()">Hide Tabs</a>
+    <br />
+    <br />
+    <a routerLink="../tab3/detail">Tab3 Detail</a>
+    <br />
+    <a routerLink="/other-detail">other-detail</a>
+    <br />
+    <a routerLink="/other-detail/child">other-detail child</a>
+    <br />
+    <a routerLink="/non-existent">non-existent</a>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
